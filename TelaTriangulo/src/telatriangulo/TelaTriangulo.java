@@ -45,6 +45,8 @@ public class TelaTriangulo {
 
 		}
 
+                
+                
 		if (hipotenusa < c) {
 
 			hipotenusa = c;
