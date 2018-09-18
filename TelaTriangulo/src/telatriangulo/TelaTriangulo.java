@@ -36,63 +36,10 @@ public class TelaTriangulo {
 
 
 		Set<String> propriedades = new HashSet<String>();
-
-		double hipotenusa = a;
-
-		if (hipotenusa < b) {
-
-			hipotenusa = b;
-
-		}
-
+                negocio negocio = new negocio();
                 
+                propriedades=negocio.validartriangulo(a, b, c);
                 
-		if (hipotenusa < c) {
-
-			hipotenusa = c;
-
-		}
-
-		if ((a + b + c - hipotenusa) > hipotenusa) {
-
-			propriedades.add("Válido");
-
-			if (a == b || b == c || c == a) {
-
-				if (a == b && b == c) {
-
-					propriedades.add("Equilátero");
-
-				} else {
-
-					propriedades.add("Isósceles");
-
-				}
-
-			}
-
-			if (a != b && b != c && c != a) {
-
-				propriedades.add("Escaleno");
-
-			}
-
-			if (((a * a + b * b + c * c) - hipotenusa * hipotenusa) == hipotenusa
-
-					* hipotenusa) {
-
-				propriedades.add("Retângulo");
-
-			}
-
-		} else {
-
-			propriedades.add("Inválido");
-
-		}
-
-		
-
 		System.out.println("Propriedades do triangulo ->");
 
 		for (String valor : propriedades) {
